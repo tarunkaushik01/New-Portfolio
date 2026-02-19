@@ -1,74 +1,113 @@
-import { Box, Button, Typography } from '@mui/material'
-import React from 'react'
+import { Box, Button, Typography } from "@mui/material";
+import React from "react";
 
 const Footer = () => {
     return (
-        <>
-            <Box
+        <Box
+            id="contact"
+            sx={{
+                pt: { xs: 8, md: 7 },
+                pb: 6,
+                px: { xs: 2, md: 6 },
+                background: "linear-gradient(135deg, #1e293b, #0f172a)",
+                color: "#ffffff",
+                textAlign: "center",
+            }}
+        >
+            {/* CTA */}
+            <Typography variant="h4" fontWeight={600} mb={1}>
+                Let’s Work Together
+            </Typography>
+
+            <Typography
                 sx={{
-                    display:"flex",
-                    flexDirection:"column",
-                    justifyContent:"center",
-                    alignItems:"center",
-                    mt:5
+                    maxWidth: "600px",
+                    mx: "auto",
+                    color: "#cbd5e1",
+                    lineHeight: 1.7,
                 }}
             >
-                <Typography variant='h4' fontWeight={600}>
-                    Let's Work Together
-                </Typography>
-                <Typography style={{marginTop:"5px"}}>
-                    I'm always open to discuss new projects, creative ideas, or opportunities to be a part of your vision
-                </Typography>
-                <Box
+                I’m always open to discussing new projects, creative ideas, or
+                opportunities to be part of something impactful.
+            </Typography>
+
+            {/* ACTION BUTTONS */}
+            <Box
+                sx={{
+                    display: "flex",
+                    gap: 2,
+                    justifyContent: "center",
+                    flexWrap: "wrap",
+                    mt: 4,
+                }}
+            >
+                <Button
+                    component="a"
+                    href="mailto:tarun@example.com?subject=Portfolio%20Inquiry"
+                    variant="contained"
                     sx={{
-                        display:"flex",
-                        gap:5,
-                        mt:5,
-                        mb:10
+                        px: 4,
+                        borderRadius: "30px",
+                        textTransform: "none",
+                        fontWeight: 500,
                     }}
                 >
-                    <Button
-                        component="a"
-                        href="mailto:tarun@example.com?subject=Portfolio%20Inquiry"
-                        variant='contained'
-                        color='primary'
-                        target='blank'
+                    Email Me
+                </Button>
 
-                        sx={{
-                            borderRadius:"15px"
-                        }}
-                    >
-                        Email Me
-                    </Button>
-                    <Button
-                        component="a"
-                        href="https://github.com/tarunkaushik01"
-                        variant='contained'
-                        color='primary'
-                        target='blank'
-                        sx={{
-                            borderRadius:"15px"
-                        }}
-                    >
-                        Github
-                    </Button>
-                    <Button
-                        component="a"
-                        href="https://www.linkedin.com/in/tarunkaushik123"
-                        variant='contained'
-                        color='primary'
-                        target='_blank'
-                        sx={{
-                            borderRadius:"15px"
-                        }}
-                    >
-                        LinkedIn
-                    </Button>
-                </Box>
+                <Button
+                    component="a"
+                    href="https://github.com/tarunkaushik01"
+                    target="_blank"
+                    variant="outlined"
+                    sx={{
+                        px: 4,
+                        borderRadius: "30px",
+                        textTransform: "none",
+                        color: "#ffffff",
+                        borderColor: "#ffffff",
+                        "&:hover": {
+                            backgroundColor: "rgba(255,255,255,0.1)",
+                            borderColor: "#ffffff",
+                        },
+                    }}
+                >
+                    GitHub
+                </Button>
 
+                <Button
+                    component="a"
+                    href="https://www.linkedin.com/in/tarunkaushik123"
+                    target="_blank"
+                    variant="outlined"
+                    sx={{
+                        px: 4,
+                        borderRadius: "30px",
+                        textTransform: "none",
+                        color: "#ffffff",
+                        borderColor: "#ffffff",
+                        "&:hover": {
+                            backgroundColor: "rgba(255,255,255,0.1)",
+                            borderColor: "#ffffff",
+                        },
+                    }}
+                >
+                    LinkedIn
+                </Button>
             </Box>
-        </>
-    )
-}
 
-export default Footer
+            {/* FOOTER NOTE */}
+            <Typography
+                sx={{
+                    mt: 6,
+                    fontSize: "14px",
+                    color: "#94a3b8",
+                }}
+            >
+                © {new Date().getFullYear()} Tarun. Built with React & MUI.
+            </Typography>
+        </Box>
+    );
+};
+
+export default Footer;

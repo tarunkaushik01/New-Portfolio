@@ -5,25 +5,20 @@ import Intro from "./content/Intro"
 import Skills from "./content/Skills"
 import Projects from "./content/Projects"
 import Footer from "./content/Footer"
+import './App.css'
+
 
 
 function App() {
+
   return (
     <>
-    <Header/>
-    <Intro/>
-    <br/>
-    <Divider/>
-    <AboutMe/>
-    <br/>
-    <Divider/>
-    <Skills/>
-    <br/>
-    <Divider/>
-    <Projects/>
-    <br/>
-    <Divider/>
-    <Footer/>
+        <Header />
+        <Intro />
+        <AboutMe />
+        <Skills />
+        <Projects />
+        <Footer />
     </>
   )
 }

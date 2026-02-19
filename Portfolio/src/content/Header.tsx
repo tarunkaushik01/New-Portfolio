@@ -1,43 +1,55 @@
 import { Box, Typography, Link } from "@mui/material";
 
 const Header = () => {
-    const sections: string[] = [
-        "About",
-        "Skills",
-        "Projects",
-        "Contact",
-    ];
+  const sections = [
+    { label: "About", id: "about" },
+    { label: "Skills", id: "skills" },
+    { label: "Projects", id: "projects" },
+    { label: "Contact", id: "contact" },
+  ];
 
-    return (
-        <Box
-            sx={{
-                display: "flex",
-                justifyContent: "space-around"
-            }}
-        >
-            <Box>
-                <Typography variant="h5">PORTFOLIO</Typography>
-            </Box>
+  const handleScroll = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
 
-            <Box
-                sx={{
-                    display: "flex",
-                    gap: 2,
-                }}
+  return (
+    <Box
+      sx={{
+        position: "sticky",
+        top: 0,
+        backgroundColor: "#fff",
+        zIndex: 100,        
+        width:"100%"
+
+      }}
+    >
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          px: 6,
+          py: 2,
+        }}
+      >
+        <Typography fontWeight={700}>PORTFOLIO</Typography>
+
+        <Box sx={{ display: "flex", gap: 4 }}>
+          {sections.map((item) => (
+            <Link
+              key={item.id}
+              underline="none"
+              sx={{ cursor: "pointer", color: "black" }}
+              onClick={() => handleScroll(item.id)}
             >
-                {sections.map((item) => (
-                    <Link key={item} sx={{
-                        textDecoration: "none",
-                        color: "black",
-                        cursor:"pointer",
-                        fontSize:"22px"
-                    }}>
-                        {item}
-                    </Link>
-                ))}
-            </Box>
-        </Box >
-    );
+              {item.label}
+            </Link>
+          ))}
+        </Box>
+      </Box>
+    </Box>
+  );
 };
 
 export default Header;
