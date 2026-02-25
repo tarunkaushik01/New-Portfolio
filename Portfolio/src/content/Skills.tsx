@@ -1,4 +1,3 @@
-import React from "react";
 import { Typography, Box, Button } from "@mui/material";
 import CodeIcon from "@mui/icons-material/Code";
 import StorageIcon from "@mui/icons-material/Storage";
@@ -36,8 +35,11 @@ const Skills = () => {
             sx={{
                 py: { xs: 8, md: 7 },
                 px: { xs: 2, md: 6 },
-                backgroundColor: "#f9fafb",
                 textAlign: "center",
+                // backgroundColor: "#143781",
+                background: "linear-gradient(135deg, #f9fafb, #eef2ff)",
+
+
             }}
         >
             {/* TITLE */}

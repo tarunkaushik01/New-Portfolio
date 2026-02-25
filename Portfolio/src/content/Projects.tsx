@@ -1,5 +1,4 @@
-import { Box, Typography, Chip, Button } from "@mui/material";
-import React from "react";
+import { Box, Typography, Chip} from "@mui/material";
 
 const projects = [
     {
