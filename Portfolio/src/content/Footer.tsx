@@ -1,5 +1,6 @@
+import { Email, GitHub, LinkedIn, Phone } from "@mui/icons-material";
 import { Box, Button, Typography } from "@mui/material";
-import React from "react";
+import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 
 const Footer = () => {
     return (
@@ -44,12 +45,16 @@ const Footer = () => {
                 <Button
                     component="a"
                     href="mailto:tarun@example.com?subject=Portfolio%20Inquiry"
-                    variant="contained"
+                    variant="outlined"
+                    startIcon={<Email/>}
+                    endIcon={<ArrowOutwardIcon sx={{color:"white"}}/>}
                     sx={{
                         px: 4,
                         borderRadius: "30px",
                         textTransform: "none",
                         fontWeight: 500,
+                        color:"#fff",
+                        borderColor:"#fff"
                     }}
                 >
                     Email Me
@@ -60,6 +65,8 @@ const Footer = () => {
                     href="https://github.com/tarunkaushik01"
                     target="_blank"
                     variant="outlined"
+                    startIcon={<GitHub/>}
+                    endIcon={<ArrowOutwardIcon sx={{color:"white"}}/>}
                     sx={{
                         px: 4,
                         borderRadius: "30px",
@@ -80,6 +87,8 @@ const Footer = () => {
                     href="https://www.linkedin.com/in/tarunkaushik123"
                     target="_blank"
                     variant="outlined"
+                    startIcon={<LinkedIn/>}
+                    endIcon={<ArrowOutwardIcon sx={{color:"white"}}/>}
                     sx={{
                         px: 4,
                         borderRadius: "30px",
@@ -93,6 +102,25 @@ const Footer = () => {
                     }}
                 >
                     LinkedIn
+                </Button>
+                <Button
+                    variant="outlined"
+                    startIcon={<Phone/>}
+                    endIcon={<ArrowOutwardIcon sx={{color:"white"}}/>}
+
+                    sx={{
+                        px: 1.5,
+                        borderRadius: "30px",
+                        textTransform: "none",
+                        color: "#ffffff",
+                        borderColor: "#ffffff",
+                        "&:hover": {
+                            backgroundColor: "rgba(255,255,255,0.1)",
+                            borderColor: "#ffffff",
+                        },
+                    }}
+                >
+                    9306792854
                 </Button>
             </Box>
 

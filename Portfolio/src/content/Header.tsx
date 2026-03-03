@@ -19,9 +19,10 @@ const Header = () => {
       sx={{
         position: "sticky",
         top: 0,
-        backgroundColor: "#fff",
-        zIndex: 100,        
-        width:"100%"
+        background:"blue",
+        zIndex: 1,        
+        width:"100%",
+        color:"#FFFFFF",
 
       }}
     >
@@ -35,13 +36,14 @@ const Header = () => {
       >
         <Typography fontWeight={700}>PORTFOLIO</Typography>
 
-        <Box sx={{ display: "flex", gap: 4 }}>
+        <Box sx={{ display: "flex", gap: 4,}}>
           {sections.map((item) => (
             <Link
               key={item.id}
               underline="none"
               sx={{ cursor: "pointer", color: "black" }}
               onClick={() => handleScroll(item.id)}
+              style={{color:"#FFFFFF",fontSize:"20px"}}
             >
               {item.label}
             </Link>

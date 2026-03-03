@@ -37,7 +37,7 @@ const Skills = () => {
                 px: { xs: 2, md: 6 },
                 textAlign: "center",
                 // backgroundColor: "#143781",
-                background: "linear-gradient(135deg, #f9fafb, #eef2ff)",
+                background: "linear-gradient(135deg, #f9fafb, #106EBE)",
 
 
             }}
@@ -117,6 +117,8 @@ const Skills = () => {
                             textTransform: "none",
                             px: 2.5,
                             fontSize: "14px",
+                            color:"#fff",
+                            borderColor:"whitesmoke"
                         }}
                     >
                         {tech}

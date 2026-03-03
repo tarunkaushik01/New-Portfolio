@@ -1,4 +1,5 @@
 import { Box, Button, Typography } from "@mui/material";
+import Snowfall from "react-snowfall";
 
 const Intro = () => {
     const handleScroll = (id: string) => {
@@ -7,27 +8,27 @@ const Intro = () => {
     });
   };
     return (
-        <Box
+        <>
+        <Snowfall color="#f5f5ee" wind={[-1,1]} speed={[0.5, 2]} radius={[5,1]} />
+            <Box
             sx={{
                 minHeight: "90vh",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 px: { xs: 2, md: 8 },
-                background: "linear-gradient(135deg, #f9fafb, #eef2ff)",
-                py:0
+                background:"linear-gradient(to right,pink, #106EBE)",
+                py:0,
             }}
         >
             <Box
                 sx={{
-                    maxWidth: "1200px",
                     width: "100%",
                     display: "flex",
                     flexDirection: { xs: "column-reverse", md: "row" },
                     alignItems: "center",
-                    gap: { xs: 6, md: 10 },
+                    gap: { xs: 6,  },
                     ml:2 ,
-
                 }}
             >
                 {/* LEFT CONTENT */}
@@ -39,14 +40,15 @@ const Intro = () => {
                         justifyContent:"center",
                         flex: 1,
                         textAlign: { xs: "center", md: "left" },
-                        // border:"1px solid black",
-                        ml:2
+                        ml:2,
+
                     }}
                 >
                     <Typography
-                        variant="h3"
+                        variant="h2"
                         fontWeight={600}
-                        sx={{ mb: 2 }}
+                        sx={{ mb: 2,color:"white" }}
+                        
                     >
                         Hi, I’m Tarun 👋
                     </Typography>
@@ -55,7 +57,6 @@ const Intro = () => {
                         sx={{
                             fontSize: "20px",
                             fontWeight: 500,
-                            color: "primary.main",
                             mb: 2,
                         }}
                     >
@@ -65,12 +66,14 @@ const Intro = () => {
                     <Typography
                         sx={{
                             textAlign:"center",
-                            fontSize: "16px",
-                            color: "text.secondary",
+                            fontSize: "18px",
+                            color: "white",
+                            // color:"grey",
                             lineHeight: 1.7,
                             maxWidth: "520px",
                             mx: { xs: "auto", md: 0 },                           
                             width:"100%",
+                            
                         }}
                     >
                         I build modern web applications with a strong focus on user
@@ -101,14 +104,15 @@ const Intro = () => {
                         </Button>
 
                         <Button
-                            variant="outlined"
+                            variant="contained"
                             size="large"
                             onClick={() => handleScroll('contact')}
-
                             sx={{
                                 px: 4,
                                 borderRadius: "30px",
                                 textTransform: "none",
+                                boxShadow: "0 10px 25px rgba(0,0,0,0.15)",
+                                color:"#FFF"
                             }}
                         >
                             Get In Touch
@@ -119,7 +123,7 @@ const Intro = () => {
                 {/* RIGHT IMAGE */}
                 <Box
                     sx={{
-                        flex: 1,
+                        // flex: 1,
                         display: "flex",
                         justifyContent: "center",
                     }}
@@ -129,15 +133,18 @@ const Intro = () => {
                         src="/Images/ProfilePicture.png"
                         alt="Tarun"
                         sx={{
-                            height: { xs: 300, md: 500 },
+                            height: { xs: 300, md: 400 },
                             width: "auto",
                             borderRadius: "20px",
-                            ml:-2,
+                            mr:10,
+                            border:"2px solid #fff",
+                            flex:1
                         }}
                     />
                 </Box>
             </Box>
         </Box>
+        </>
     );
 };
 

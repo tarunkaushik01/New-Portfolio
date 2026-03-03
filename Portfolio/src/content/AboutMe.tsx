@@ -8,6 +8,7 @@ const AboutMe = () => {
                 py: { xs: 8, md: 7 },
                 px: { xs: 2, md: 6 },
                 backgroundColor: "#ffffff",
+                boxShadow: "0 0 12px rgba(16,110,190,0.6)",
                 display: "flex",
                 justifyContent: "center",
             }}
@@ -16,6 +17,7 @@ const AboutMe = () => {
                 sx={{
                     maxWidth: "900px",
                     textAlign: "center",
+
                 }}
             >
                 {/* SECTION TITLE */}
@@ -43,7 +45,6 @@ const AboutMe = () => {
                     sx={{
                         fontSize: "16px",
                         lineHeight: 1.8,
-                        color: "text.secondary",
                         mb: 3,
                     }}
                 >
@@ -57,7 +58,6 @@ const AboutMe = () => {
                     sx={{
                         fontSize: "16px",
                         lineHeight: 1.8,
-                        color: "text.secondary",
                         mb: 3,
                     }}
                 >
@@ -71,7 +71,6 @@ const AboutMe = () => {
                     sx={{
                         fontSize: "16px",
                         lineHeight: 1.8,
-                        color: "text.secondary",
                         mb: 3,
                     }}
                 >
@@ -85,7 +84,6 @@ const AboutMe = () => {
                     sx={{
                         fontSize: "16px",
                         lineHeight: 1.8,
-                        color: "text.secondary",
                     }}
                 >
                     When I’m not coding, I enjoy exploring new technologies, improving my

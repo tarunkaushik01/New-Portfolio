@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  height: 70px;
+  padding: 0 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #eaf4ff, #b9ddff);
+  backdrop-filter: blur(12px);
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1a73e8;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links li {
+  cursor: pointer;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Hero */
+.hero {
+  min-height: calc(100vh - 70px);
+  padding: 0 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #eaf4ff, #5aa9f8);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Left */
+.hero-left {
+  max-width: 550px;
+}
+
+.hero-left h1 {
+  font-size: 52px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.wave {
+  animation: wave 1.6s infinite;
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(14deg); }
+  40% { transform: rotate(-8deg); }
+  60% { transform: rotate(14deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.hero-left h2 {
+  margin-top: 16px;
+  font-size: 22px;
+  color: #0b2b52;
+}
+
+.hero-left p {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #f2f6fb;
+  line-height: 1.6;
+}
+
+/* Buttons */
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.primary,
+.secondary {
+  padding: 14px 26px;
+  border-radius: 30px;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.primary {
+  background: #1a73e8;
+  color: #fff;
+}
+
+.primary:hover {
+  background: #0f5ec7;
+}
+
+.secondary {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  backdrop-filter: blur(8px);
+}
+
+.secondary:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Right */
+.hero-right {
+  position: relative;
+}
+
+.image-card {
+  width: 340px;
+  height: 420px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(16px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-card img {
+  width: 85%;
+  height: auto;
+  border-radius: 16px;
+}
+
+/* Particles */
+.particles::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(#ffffff 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.3;
+}
