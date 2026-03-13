@@ -6,15 +6,16 @@ import Skills from "./content/Skills"
 import Projects from "./content/Projects"
 import Footer from "./content/Footer"
 import './App.css'
-import Hero from "./content/Test"
+// import Hero from "./content/Test"
+// import Snowfall from "react-snowfall"
 // import Fireworks from "fireworks-js"
 // import Snowfall from "react-snowfall"
 function App() {
   return (
     <>
+      {/* <Snowfall style={{position:"fixed"}} color="pink"/> */}
       <Header />
       <Intro />
-      {/* <Hero/> */}
       <AboutMe />
       <Skills />
       <Projects />

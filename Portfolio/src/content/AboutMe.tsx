@@ -8,7 +8,7 @@ const AboutMe = () => {
                 py: { xs: 8, md: 7 },
                 px: { xs: 2, md: 6 },
                 backgroundColor: "#ffffff",
-                boxShadow: "0 0 12px rgba(16,110,190,0.6)",
+                boxShadow: "0 0 12px grey",
                 display: "flex",
                 justifyContent: "center",
             }}
@@ -49,7 +49,7 @@ const AboutMe = () => {
                     }}
                 >
                     I’m a passionate full-stack developer with 1+ year of experience
-                    building modern web applications. I specialize in <b>.NET Framework & .NET Core</b>,
+                    building modern web applications. I am specialized in <b>.NET Framework & .NET Core</b>,
                     <b> React</b>, and <b>SQL Server</b>, with a strong focus on clean architecture
                     and performance.
                 </Typography>
